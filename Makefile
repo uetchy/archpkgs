@@ -9,7 +9,7 @@ clean:
 
 $(PKGBASE):
 	echo Building $@
-	docker run --rm -v "$(CURDIR)/$@:/build" -it makepkg
+	docker run --rm -v "$(CURDIR)/$@:/build" -it ghcr.io/uetchy/makepkg
 
 # for maintainers
 build:
