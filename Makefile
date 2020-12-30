@@ -8,8 +8,7 @@ clean:
 	rm -rf */{pkg,src,*.zst,*.tar.gz}
 
 $(PKGBASE):
-	echo Building $@
-	docker run --rm -v "$(CURDIR)/$@:/build" -it ghcr.io/uetchy/makepkg
+	docker run --rm -v "$(CURDIR)/$@:/build" -it ghcr.io/uetchy/makepkg sh
 
 # for maintainers
 build:
