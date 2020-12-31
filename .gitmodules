@@ -1,3 +1,6 @@
 [submodule "cfddns"]
-	path = cfddns
+	path = pkgs/cfddns
 	url = ssh://aur@aur.archlinux.org/cfddns.git
+[submodule "ghq-gst"]
+	path = pkgs/ghq-gst
+	url = ssh://aur@aur.archlinux.org/ghq-gst.git
