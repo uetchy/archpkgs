@@ -1,4 +1,4 @@
-TARGETS := all clean publish build
+TARGETS := all clean publish rebuild
 PKGBASE := $(wildcard pkgs/*)
 .PHONY: $(TARGETS) $(PKGBASE)
 
@@ -11,8 +11,8 @@ $(PKGBASE):
 	docker run --rm -v "$(CURDIR)/$@:/build" -it ghcr.io/uetchy/makepkg $$CMD
 
 # for maintainers
-build:
-	docker build -t ghcr.io/uetchy/makepkg docker
+rebuild:
+	docker build --no-cache -t ghcr.io/uetchy/makepkg docker
 
-publish: build
+publish: rebuild
 	docker push ghcr.io/uetchy/makepkg
