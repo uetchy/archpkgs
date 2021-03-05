@@ -1,12 +1,10 @@
 # Sources
 /*/src
-/*/.source
-/*/*.tar.gz
+.source
 
 # Built package
 /*/pkg
-/*/*.pkg.tar.xz
-/*/*.zst
+*.zst
 
 # Cache
 *.tar.gz

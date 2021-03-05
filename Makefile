@@ -11,8 +11,8 @@ $(PKGBASE):
 	docker run --rm -v "$(CURDIR)/$@:/build" -it ghcr.io/uetchy/makepkg $$CMD
 
 # for maintainers
-rebuild:
-	docker build --no-cache -t ghcr.io/uetchy/makepkg docker
+rebuild-image:
+	docker build --pull --no-cache -t ghcr.io/uetchy/makepkg docker
 
-publish: rebuild
+publish-image: rebuild
 	docker push ghcr.io/uetchy/makepkg

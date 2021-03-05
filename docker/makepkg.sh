@@ -1,5 +1,5 @@
 #!/bin/sh
-# sudo pacman -Sy
+sudo pacman -Sy
 makepkg -sfi --needed --noconfirm
 makepkg --printsrcinfo > .SRCINFO
 $@
