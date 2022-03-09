@@ -1,6 +1,6 @@
 # ArchLinux PKGBUILD repository
 
-## cleanroom testing
+## Cleanroom testing
 
 Build each package within a clean built ArchLinux container on Docker.
 
@@ -8,10 +8,16 @@ Build each package within a clean built ArchLinux container on Docker.
 make
 ```
 
-### test specific package
+### Test specific package
 
-```
+```bash
 make pkgs/<pkgbase>
+```
+
+### Calculate SHASUM
+
+```bash
+curl <url.tar.gz> | shasum -a 256
 ```
 
 ## further readings
